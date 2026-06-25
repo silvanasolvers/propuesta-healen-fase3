@@ -545,6 +545,48 @@
       line-height: 1.5;
     }
 
+    .tools-note {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+      gap: 18px;
+      margin-top: 18px;
+      padding: 24px;
+      border: 1px solid rgba(111, 68, 158, .22);
+      border-radius: 20px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.92), rgba(246,242,255,.9)),
+        radial-gradient(circle at bottom left, rgba(148, 224, 206, .2), transparent 18rem);
+      box-shadow: 0 14px 42px rgba(53, 27, 88, .08);
+    }
+
+    .tools-note strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--purple-dark);
+      font-size: 20px;
+    }
+
+    .tools-note p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .tools-note .amount {
+      color: var(--ink);
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .tools-note ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
     .step {
       padding: 24px;
     }
@@ -649,6 +691,7 @@
       .scope-grid,
       .steps,
       .balance-plan,
+      .tools-note,
       .agent-list {
         grid-template-columns: 1fr 1fr;
       }
@@ -756,6 +799,7 @@
       .steps,
       .balance-plan,
       .balance-steps,
+      .tools-note,
       .agent-list {
         grid-template-columns: 1fr;
       }
@@ -893,6 +937,19 @@
             </article>
           </div>
         </div>
+
+        <div class="tools-note" aria-label="Costos de herramientas técnicas">
+          <div>
+            <strong>Sin mensualidad de gestión Solvers.</strong>
+            <div class="amount">$0 COP</div>
+            <p>Por ser Healen y por buscar que el equipo administre la herramienta de forma propia, SolversAI no cobrará una mensualidad de gestión sobre esta Fase 3.</p>
+          </div>
+          <ul>
+            <li>Healen debe proporcionar una tarjeta débito o crédito para cubrir los consumos técnicos de las herramientas que funcionan por detrás.</li>
+            <li>El consumo mensual estimado será normalmente de $250.000 a $300.000 COP.</li>
+            <li>Se manejará un tope de referencia de $500.000 COP mensuales; llegar a ese nivel debería ser poco frecuente y dependerá del uso real.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -1021,6 +1078,14 @@
                 <span>Pago del saldo restante</span>
                 <strong>50% avance · 25% pre-cierre · 25% final</strong>
               </div>
+              <div class="summary-row">
+                <span>Gestión mensual Solvers</span>
+                <strong>$0 COP</strong>
+              </div>
+              <div class="summary-row">
+                <span>Consumos técnicos estimados</span>
+                <strong>$250.000 - $300.000 COP/mes</strong>
+              </div>
             </div>
           </div>
 
@@ -1028,9 +1093,9 @@
             <div>
               <p>Pago para activar ahora</p>
               <div class="amount">$3.900.000 COP</div>
-              <p>$1.400.000 de cierre Fase 2 + $2.500.000 de adelanto Fase 3. El saldo de $10.000.000 COP se paga 50% con entrega de avance, 25% a punto de finalizar y 25% al finalizar.</p>
+              <p>$1.400.000 de cierre Fase 2 + $2.500.000 de adelanto Fase 3. El saldo de $10.000.000 COP se paga 50% con entrega de avance, 25% a punto de finalizar y 25% al finalizar. SolversAI no cobra mensualidad de gestión; Healen solo debe proporcionar una tarjeta para consumos técnicos estimados entre $250.000 y $300.000 COP al mes, con tope de referencia de $500.000 COP.</p>
             </div>
-            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20%2415.300.000%20COP.%20Entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20y%20%242.500.000%20COP%20como%20adelanto%2C%20quedando%20un%20saldo%20de%20%2410.000.000%20COP.%20Para%20iniciar%20pagaremos%20%243.900.000%20COP.%20El%20saldo%20restante%20se%20pagara%2050%25%20con%20entrega%20de%20avance%2C%2025%25%20a%20punto%20de%20finalizar%20y%2025%25%20una%20vez%20finalizado." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
+            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20%2415.300.000%20COP.%20Entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20y%20%242.500.000%20COP%20como%20adelanto%2C%20quedando%20un%20saldo%20de%20%2410.000.000%20COP.%20Para%20iniciar%20pagaremos%20%243.900.000%20COP.%20El%20saldo%20restante%20se%20pagara%2050%25%20con%20entrega%20de%20avance%2C%2025%25%20a%20punto%20de%20finalizar%20y%2025%25%20una%20vez%20finalizado.%20Entendemos%20que%20SolversAI%20no%20cobra%20mensualidad%20de%20gestion%20y%20que%20Healen%20proporcionara%20una%20tarjeta%20debito%20o%20credito%20para%20consumos%20tecnicos%20estimados%20entre%20%24250.000%20y%20%24300.000%20COP%20al%20mes%2C%20con%20tope%20de%20referencia%20de%20%24500.000%20COP." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
           </aside>
         </div>
       </div>
