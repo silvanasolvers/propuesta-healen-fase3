@@ -1,0 +1,13 @@
+{
+  "name": "propuesta-healen-fase3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Propuesta comercial Healen Fase 3 con agente SolversAI",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node scripts/check.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
