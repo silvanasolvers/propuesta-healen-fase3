@@ -321,6 +321,31 @@
       line-height: 1;
     }
 
+    .strike-price,
+    .strike-value {
+      position: relative;
+      display: inline-block;
+      color: var(--muted);
+    }
+
+    .strike-price::after,
+    .strike-value::after {
+      content: "";
+      position: absolute;
+      left: -5%;
+      right: -5%;
+      top: 52%;
+      height: 4px;
+      border-radius: 999px;
+      background: #e0404f;
+      transform: rotate(-4deg);
+      transform-origin: center;
+    }
+
+    .strike-value::after {
+      height: 3px;
+    }
+
     .money-card p {
       margin: 0;
       color: var(--muted);
@@ -883,7 +908,7 @@
             <a class="button primary" href="#cuentas">Ver cuentas claras</a>
             <a class="button secondary" href="#agente">Ver Eva Healen</a>
           </div>
-          <p class="hero-note">Valor normal del proyecto: $25.000.000 COP. Para Healen queda en $17.300.000 COP y la fase anterior de $2.800.000 COP se reconoce a favor.</p>
+          <p class="hero-note">Valor normal del proyecto: $25.000.000 COP. Para Healen queda en $17.300.000 COP; al cerrar el otro 50% de la Fase 1, esa fase queda reconocida a favor.</p>
         </div>
 
         <div class="visual-card" aria-label="Imagen visual Healen">
@@ -908,7 +933,7 @@
         <div class="money-grid">
           <article class="money-card">
             <div class="label">Valor normal del proyecto</div>
-            <div class="amount">$25.000.000 COP</div>
+            <div class="amount strike-price">$25.000.000 COP</div>
             <p>Valor real de una fase de este alcance: agente, portal, automatización 360, seguimiento y estructura operativa.</p>
           </article>
           <article class="money-card">
@@ -917,9 +942,9 @@
             <p>Precio preferencial solo por continuidad con Healen y porque ya estamos trabajando sobre una base existente.</p>
           </article>
           <article class="money-card">
-            <div class="label">Fase anterior a favor</div>
+            <div class="label">Fase 1 a favor</div>
             <div class="amount">$2.800.000 COP</div>
-            <p>Corresponde a la fase ya trabajada y queda aplicada como crédito para esta nueva etapa.</p>
+            <p>Para reconocerla completa a favor, Healen cancela el otro 50% pendiente de la fase anterior: $1.400.000 COP.</p>
           </article>
           <article class="money-card highlight">
             <div class="label">Saldo Fase 3</div>
@@ -929,7 +954,7 @@
         </div>
 
         <div class="formula">
-          $17.300.000 - $2.800.000 = $14.500.000 COP de saldo para la Fase 3.
+          $17.300.000 - $2.800.000 = $14.500.000 COP de saldo para la Fase 3. Para iniciar: $1.400.000 COP de cierre Fase 1 + $7.250.000 COP del 50% inicial.
         </div>
       </div>
     </section>
@@ -937,25 +962,25 @@
     <section>
       <div class="shell">
         <div class="section-head">
-          <h2>Pago para iniciar sin dejar cabos sueltos.</h2>
-          <p>La continuidad mantiene el crédito de la fase anterior y divide el saldo restante por avance real del proyecto.</p>
+          <h2>Para iniciar: cerrar lo anterior y activar lo nuevo.</h2>
+          <p>Primero se deja cancelada la Fase 1 y luego se paga el 50% inicial de esta nueva fase. Así todo queda limpio y fácil de entender.</p>
         </div>
 
         <div class="steps">
           <article class="step">
             <span>1</span>
-            <h3>50% para iniciar</h3>
-            <p>Abono inicial de $7.250.000 COP para activar Eva Healen, portal de pacientes y automatizaciones internas.</p>
+            <h3>Cerrar el otro 50% de Fase 1</h3>
+            <p>Pago de $1.400.000 COP para dejar cancelada la fase anterior y reconocer sus $2.800.000 COP completos a favor.</p>
           </article>
           <article class="step">
             <span>2</span>
-            <h3>25% antes de entregar</h3>
-            <p>Segundo pago de $3.625.000 COP antes de la entrega final, contra avance funcional del proyecto.</p>
+            <h3>50% para iniciar Fase 3</h3>
+            <p>Pago de $7.250.000 COP para arrancar formalmente Eva Healen, portal de pacientes y automatizaciones internas.</p>
           </article>
           <article class="step">
             <span>3</span>
-            <h3>25% al finalizar</h3>
-            <p>Pago final de $3.625.000 COP una vez finalizada y entregada la Fase 3 completa.</p>
+            <h3>Total de arranque</h3>
+            <p>$8.650.000 COP para iniciar: $1.400.000 COP de cierre Fase 1 + $7.250.000 COP del 50% inicial de Fase 3.</p>
           </article>
         </div>
 
@@ -963,7 +988,7 @@
           <div class="balance-total">
             <p>Saldo después del crédito aplicado</p>
             <div class="amount">$14.500.000 COP</div>
-            <p>Este saldo queda dividido en tres pagos: inicio, antes de entregar y cierre final.</p>
+            <p>Este saldo se divide en tres pagos: 50% para iniciar, 25% antes de entregar y 25% al finalizar.</p>
           </div>
           <div class="balance-steps">
             <article class="balance-item">
@@ -1190,19 +1215,27 @@
               </div>
               <div class="summary-row">
                 <span>Valor normal del proyecto</span>
-                <strong>$25.000.000 COP</strong>
+                <strong class="strike-value">$25.000.000 COP</strong>
               </div>
               <div class="summary-row">
                 <span>Valor especial para Healen</span>
                 <strong>$17.300.000 COP</strong>
               </div>
               <div class="summary-row">
-                <span>Fase anterior reconocida a favor</span>
+                <span>Fase 1 reconocida a favor</span>
                 <strong>$2.800.000 COP</strong>
+              </div>
+              <div class="summary-row">
+                <span>Cancelación otro 50% Fase 1</span>
+                <strong>$1.400.000 COP</strong>
               </div>
               <div class="summary-row">
                 <span>Saldo de Fase 3 después del crédito</span>
                 <strong>$14.500.000 COP</strong>
+              </div>
+              <div class="summary-row">
+                <span>Pago para iniciar ahora</span>
+                <strong>$8.650.000 COP</strong>
               </div>
               <div class="summary-row">
                 <span>Pago del saldo restante</span>
@@ -1222,10 +1255,10 @@
           <aside class="total-panel">
             <div>
               <p>Pago para iniciar ahora</p>
-              <div class="amount">$7.250.000 COP</div>
-              <p>El proyecto normalmente cuesta $25.000.000 COP. Para Healen queda en $17.300.000 COP y se descuentan $2.800.000 COP de la fase anterior, dejando un saldo de $14.500.000 COP. Esta etapa instala Eva Healen, portal de pacientes y automatización 360 para ventas, cartera, tratamientos, marketing, cotizaciones y tareas internas. El 50% para iniciar es $7.250.000 COP, el 25% antes de entregar es $3.625.000 COP y el 25% final es $3.625.000 COP. SolversAI no cobra mensualidad de gestión por ser Healen; Healen solo debe proporcionar una tarjeta para consumos técnicos estimados entre $250.000 y $300.000 COP al mes, con tope de referencia de $500.000 COP.</p>
+              <div class="amount">$8.650.000 COP</div>
+              <p>El proyecto normalmente cuesta $25.000.000 COP. Para Healen queda en $17.300.000 COP y se descuentan $2.800.000 COP de la fase anterior, dejando un saldo de $14.500.000 COP. Para iniciar se paga $1.400.000 COP del otro 50% de la Fase 1, dejando esa etapa cancelada, más $7.250.000 COP correspondientes al 50% inicial de esta nueva fase. Esta etapa instala Eva Healen, portal de pacientes y automatización 360 para ventas, cartera, tratamientos, marketing, cotizaciones y tareas internas. El 25% antes de entregar es $3.625.000 COP y el 25% final es $3.625.000 COP. SolversAI no cobra mensualidad de gestión por ser Healen; Healen solo debe proporcionar una tarjeta para consumos técnicos estimados entre $250.000 y $300.000 COP al mes, con tope de referencia de $500.000 COP.</p>
             </div>
-            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20valor%20especial%20de%20%2417.300.000%20COP%2C%20sobre%20un%20valor%20normal%20de%20%2425.000.000%20COP%2C%20incluyendo%20Eva%20Healen%2C%20portal%20de%20pacientes%20y%20automatizacion%20360%20para%20ventas%2C%20cartera%2C%20tratamientos%2C%20marketing%2C%20cotizaciones%20y%20tareas%20internas.%20Entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20a%20favor%2C%20quedando%20un%20saldo%20de%20%2414.500.000%20COP.%20Para%20iniciar%20pagaremos%20el%2050%25%3A%20%247.250.000%20COP.%20El%2025%25%20antes%20de%20entregar%20sera%20%243.625.000%20COP%20y%20el%2025%25%20final%20sera%20%243.625.000%20COP.%20Entendemos%20que%20SolversAI%20no%20cobra%20mensualidad%20de%20gestion%20por%20ser%20Healen%20y%20que%20Healen%20proporcionara%20una%20tarjeta%20debito%20o%20credito%20para%20consumos%20tecnicos%20estimados%20entre%20%24250.000%20y%20%24300.000%20COP%20al%20mes%2C%20con%20tope%20de%20referencia%20de%20%24500.000%20COP." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
+            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20valor%20especial%20de%20%2417.300.000%20COP%2C%20sobre%20un%20valor%20normal%20de%20%2425.000.000%20COP%2C%20incluyendo%20Eva%20Healen%2C%20portal%20de%20pacientes%20y%20automatizacion%20360%20para%20ventas%2C%20cartera%2C%20tratamientos%2C%20marketing%2C%20cotizaciones%20y%20tareas%20internas.%20Entendemos%20que%20debemos%20cancelar%20%241.400.000%20COP%20correspondientes%20al%20otro%2050%25%20de%20la%20fase%20anterior%20para%20dejarla%20cerrada%20y%20reconocida%20a%20favor.%20Tambien%20entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20como%20credito%2C%20quedando%20un%20saldo%20de%20%2414.500.000%20COP%20para%20esta%20nueva%20fase.%20Para%20iniciar%20pagaremos%20%248.650.000%20COP%3A%20%241.400.000%20COP%20de%20cierre%20de%20fase%20anterior%20%2B%20%247.250.000%20COP%20del%2050%25%20inicial%20de%20Fase%203.%20El%2025%25%20antes%20de%20entregar%20sera%20%243.625.000%20COP%20y%20el%2025%25%20final%20sera%20%243.625.000%20COP.%20Entendemos%20que%20SolversAI%20no%20cobra%20mensualidad%20de%20gestion%20por%20ser%20Healen%20y%20que%20Healen%20proporcionara%20una%20tarjeta%20debito%20o%20credito%20para%20consumos%20tecnicos%20estimados%20entre%20%24250.000%20y%20%24300.000%20COP%20al%20mes%2C%20con%20tope%20de%20referencia%20de%20%24500.000%20COP." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
           </aside>
         </div>
       </div>
