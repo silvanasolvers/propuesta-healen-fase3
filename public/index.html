@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Healen | Propuesta Fase 3</title>
-  <meta name="description" content="Propuesta SolversAI para Healen Fase 3: agente por Telegram, automatizacion comercial, pauta, ventas y gestion operativa.">
+  <meta name="description" content="Propuesta SolversAI para Healen Fase 3: Evangelin Healen, portal de pacientes, automatizacion comercial, operativa, medica, marketing y cartera.">
   <style>
     :root {
       --ink: #261733;
@@ -356,9 +356,22 @@
       gap: 16px;
     }
 
+    .wide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
     .scope-card {
       min-height: 260px;
       padding: 24px;
+    }
+
+    .scope-card.featured {
+      min-height: 300px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.94), rgba(239,231,255,.86)),
+        radial-gradient(circle at top right, rgba(148, 224, 206, .24), transparent 18rem);
     }
 
     .scope-icon {
@@ -474,6 +487,35 @@
       margin: 0;
       color: rgba(255, 255, 255, .78);
       line-height: 1.55;
+    }
+
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .metric-item {
+      min-height: 150px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .84);
+      box-shadow: 0 14px 42px rgba(53, 27, 88, .08);
+    }
+
+    .metric-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--purple-dark);
+      font-size: 18px;
+    }
+
+    .metric-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     .steps {
@@ -689,10 +731,12 @@
 
       .money-grid,
       .scope-grid,
+      .wide-grid,
       .steps,
       .balance-plan,
       .tools-note,
-      .agent-list {
+      .agent-list,
+      .metric-strip {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -796,11 +840,13 @@
 
       .money-grid,
       .scope-grid,
+      .wide-grid,
       .steps,
       .balance-plan,
       .balance-steps,
       .tools-note,
-      .agent-list {
+      .agent-list,
+      .metric-strip {
         grid-template-columns: 1fr;
       }
 
@@ -824,20 +870,20 @@
         </div>
         <div class="nav-meta">
           <span class="pill">Propuesta SolversAI</span>
-          <span class="pill">Agente + automatización</span>
+          <span class="pill">Evangelin + portal paciente</span>
         </div>
       </nav>
 
       <header class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Fase 3 · Escala operativa y comercial</p>
+          <p class="eyebrow">Fase 3 · Automatización total Healen</p>
           <h1>Healen Fase 3.</h1>
-          <p class="lead">La siguiente fase convierte el sistema en una operación asistida por IA: ventas, pauta, seguimiento, estrategia y gestión desde Telegram, con una estructura pensada para que el equipo avance más rápido.</p>
+          <p class="lead">La siguiente fase convierte lo ya construido en una operación inteligente: Evangelin Healen, portal de pacientes, automatización comercial, seguimiento de tratamientos, cartera, marketing, cotizaciones médicas y estadísticas para tomar mejores decisiones.</p>
           <div class="hero-actions">
             <a class="button primary" href="#cuentas">Ver cuentas claras</a>
-            <a class="button secondary" href="#agente">Qué incluye el agente</a>
+            <a class="button secondary" href="#agente">Ver Evangelin Healen</a>
           </div>
-          <p class="hero-note">Precio especial para Healen: $15.300.000 COP. Los pagos de la fase anterior y el nuevo adelanto se reconocen a favor para que la continuidad sea simple.</p>
+          <p class="hero-note">La fase anterior de $2.800.000 COP queda reconocida a favor para esta nueva etapa. Sobre esa base se agrega una capa mucho más amplia para automatizar la cara interna y la cara del paciente.</p>
         </div>
 
         <div class="visual-card" aria-label="Imagen visual Healen">
@@ -845,8 +891,8 @@
             <img src="/assets/healen-visual.jpg" alt="">
           </div>
           <div class="visual-panel">
-            <strong>Agente SolversAI para Healen</strong>
-            <p>Un asistente operativo por Telegram para pedir estrategias, organizar campañas, revisar tareas, preparar copys y apoyar decisiones comerciales.</p>
+            <strong>Evangelin Healen</strong>
+            <p>Un agente con poderes comerciales, médicos, operativos y estratégicos para acompañar desde el primer hola del cliente hasta la gestión interna del tratamiento.</p>
           </div>
         </div>
       </header>
@@ -856,7 +902,7 @@
       <div class="shell">
         <div class="section-head">
           <h2>Las cuentas quedan simples.</h2>
-          <p>Separamos cierre de la fase actual, adelanto de la Fase 3 y saldo pendiente para que la aprobación no tenga enredos.</p>
+          <p>La fase previa ya aprobada se reconoce como crédito para que Healen pueda pasar a una automatización más completa sin perder lo invertido.</p>
         </div>
 
         <div class="money-grid">
@@ -868,12 +914,12 @@
           <article class="money-card">
             <div class="label">Fase anterior a favor</div>
             <div class="amount">$2.800.000 COP</div>
-            <p>Corresponde al total de la fase previa, una vez se complete el saldo pendiente.</p>
+            <p>Corresponde a la fase ya trabajada y queda aplicada como base técnica y saldo a favor para esta nueva etapa.</p>
           </article>
           <article class="money-card">
             <div class="label">Nuevo adelanto Fase 3</div>
             <div class="amount">$2.500.000 COP</div>
-            <p>Abono inicial para activar esta nueva etapa de automatización.</p>
+            <p>Abono inicial para activar Evangelin Healen, portal de pacientes y automatizaciones de negocio.</p>
           </article>
           <article class="money-card highlight">
             <div class="label">Saldo Fase 3</div>
@@ -892,24 +938,24 @@
       <div class="shell">
         <div class="section-head">
           <h2>Pago para iniciar sin dejar cabos sueltos.</h2>
-          <p>La fase anterior se cierra y la Fase 3 arranca con un adelanto claro.</p>
+          <p>La continuidad mantiene el crédito de la fase anterior y activa la construcción de la nueva capa inteligente.</p>
         </div>
 
         <div class="steps">
           <article class="step">
             <span>1</span>
-            <h3>Cierre de Fase 2</h3>
-            <p>Queda pendiente cancelar $1.400.000 COP para dejar la fase anterior finalizada y reconocida por completo.</p>
+            <h3>Reconocimiento de fase previa</h3>
+            <p>La fase de $2.800.000 COP queda tomada como avance a favor y como base sobre la que se conecta esta etapa.</p>
           </article>
           <article class="step">
             <span>2</span>
             <h3>Adelanto Fase 3</h3>
-            <p>Se solicita un adelanto de $2.500.000 COP para iniciar la instalación y configuración del agente.</p>
+            <p>Se solicita un adelanto de $2.500.000 COP para iniciar Evangelin, portal de pacientes y automatizaciones internas.</p>
           </article>
           <article class="step">
             <span>3</span>
             <h3>Total de activación</h3>
-            <p>Pago inmediato sugerido: $3.900.000 COP. Con eso se cierra Fase 2 y se activa la Fase 3.</p>
+            <p>Pago inmediato sugerido: $3.900.000 COP. Con eso se deja ordenada la fase previa y se activa la Fase 3.</p>
           </article>
         </div>
 
@@ -956,52 +1002,52 @@
     <section id="agente" class="agent-band">
       <div class="shell">
         <div class="section-head">
-          <h2>Qué se instala en esta Fase 3.</h2>
-          <p>Un agente operativo para que Healen no solo tenga información, sino capacidad diaria de ejecución.</p>
+          <h2>Evangelin Healen: el agente central.</h2>
+          <p>Un agente con dos caras: una interna para que el equipo opere mejor y una externa para acompañar al paciente desde la conversación hasta el seguimiento.</p>
         </div>
 
         <div class="agent-layout">
           <div class="phone" aria-label="Vista simulada de Telegram">
             <div class="phone-screen">
               <div class="chat-title">
-                <span>Telegram · Agente Healen</span>
+                <span>Telegram · Evangelin Healen</span>
                 <span class="pill">Activo</span>
               </div>
               <div class="chat">
-                <div class="bubble you">Necesito una estrategia para vender más tratamientos esta semana.</div>
-                <div class="bubble">Listo. Te propongo 3 campañas: pacientes nuevos, recompra de sueros y recuperación de interesados. También preparo copys, guion de WhatsApp y estructura de pauta.</div>
-                <div class="bubble you">Dame copy para pauta y seguimiento.</div>
-                <div class="bubble">Te dejo 5 anuncios, 3 mensajes de seguimiento y una lista de tareas para el equipo comercial.</div>
-                <div class="bubble you">Recuérdame revisar cartera e inventario.</div>
-                <div class="bubble">Agendado. También te resumo pendientes críticos para decidir compras y próximas ventas.</div>
+                <div class="bubble you">Un paciente acaba de escribir. Necesito llevarlo a venta.</div>
+                <div class="bubble">Listo. Respondo el primer contacto, califico necesidad, sugiero tratamiento, derivo al equipo y dejo el seguimiento creado.</div>
+                <div class="bubble you">El médico acaba de terminar consulta. Te mando audio con lo recomendado.</div>
+                <div class="bubble">Recibido. Convierto el audio en cotización, organizo servicios, precios, próximos pasos y mensaje listo para entregar al paciente.</div>
+                <div class="bubble you">Muéstrame pacientes próximos a vencer y cartera pendiente.</div>
+                <div class="bubble">Te separo recompras, tratamientos por renovar, saldos pendientes, oportunidades de pauta y tareas prioritarias para hoy.</div>
               </div>
             </div>
           </div>
 
           <div class="agent-list">
             <article class="agent-item">
-              <strong>Estrategias de venta</strong>
-              <p>Ideas comerciales, campañas por servicio, ofertas, paquetes y rutas de seguimiento para convertir más consultas.</p>
+              <strong>Ventas desde el primer hola</strong>
+              <p>Atención inicial, calificación de interés, respuesta comercial, seguimiento y ayuda para cerrar tratamientos.</p>
             </article>
             <article class="agent-item">
-              <strong>Pauta y contenido</strong>
-              <p>Copys, ángulos, guiones, hooks, ideas para anuncios y estructura de campañas para Meta o canales comerciales.</p>
+              <strong>Cotizaciones por audio médico</strong>
+              <p>El médico puede enviar una nota de voz durante o después de consulta y Evangelin prepara la cotización lista para entregar.</p>
             </article>
             <article class="agent-item">
-              <strong>Gestión por Telegram</strong>
-              <p>Un canal simple para pedir acciones, recibir resúmenes, consultar pendientes y activar procesos sin entrar a sistemas complejos.</p>
+              <strong>Control interno del negocio</strong>
+              <p>Pacientes por fase, ciclo de tratamiento, ejecución de terapias, recompras, vencimientos, cartera y prioridades del equipo.</p>
             </article>
             <article class="agent-item">
-              <strong>Seguimiento operativo</strong>
-              <p>Apoyo para tareas, recordatorios, revisión de cartera, inventario, pacientes, oportunidades y prioridades del día.</p>
+              <strong>Marketing y pauta</strong>
+              <p>Ángulos, copys, guiones, campañas, audiencias, ofertas, calendario de contenido y lectura de oportunidades comerciales.</p>
             </article>
             <article class="agent-item">
-              <strong>Decisiones con contexto</strong>
-              <p>Lecturas rápidas para saber qué vender, qué reforzar, qué revisar y dónde hay fugas de dinero o atención.</p>
+              <strong>Subagentes por área</strong>
+              <p>Soporte para ventas, contabilidad, cartera, tareas, marketing, estrategia y seguimiento de pacientes.</p>
             </article>
             <article class="agent-item">
-              <strong>Base escalable</strong>
-              <p>La automatización queda pensada para seguir conectando módulos, reportes y flujos según crezca Healen.</p>
+              <strong>Decisiones con estadísticas</strong>
+              <p>Lectura de datos para saber qué vender, qué tratamiento reforzar, dónde hay fuga, qué paciente retomar y qué campaña activar.</p>
             </article>
           </div>
         </div>
@@ -1011,40 +1057,116 @@
     <section>
       <div class="shell">
         <div class="section-head">
+          <h2>Portal de pacientes conectado a la fase anterior.</h2>
+          <p>La base ya desarrollada no se pierde: se transforma en una experiencia clara para que el paciente vea su avance y Healen controle mejor cada tratamiento.</p>
+        </div>
+
+        <div class="wide-grid">
+          <article class="scope-card featured">
+            <div class="scope-icon">P1</div>
+            <h3>Histórico del paciente</h3>
+            <p>Vista para que el cliente consulte cuánto tiempo lleva con Healen, qué tratamientos ha tomado, fechas relevantes, ciclos, sesiones, dosis y progreso acumulado.</p>
+          </article>
+          <article class="scope-card featured">
+            <div class="scope-icon">P2</div>
+            <h3>Mensaje de progreso</h3>
+            <p>Comunicación más humana para que el paciente sienta que va bien: recordatorios, avances, próximas recomendaciones y señales de continuidad del tratamiento.</p>
+          </article>
+          <article class="scope-card featured">
+            <div class="scope-icon">P3</div>
+            <h3>Control de efectividad</h3>
+            <p>Registro organizado de ejecución de terapias, cumplimiento, recompras y resultados para que Healen pueda garantizar mejor seguimiento clínico y comercial.</p>
+          </article>
+          <article class="scope-card featured">
+            <div class="scope-icon">P4</div>
+            <h3>Puente entre paciente y equipo</h3>
+            <p>El portal y Evangelin trabajan como dos caras del mismo sistema: el paciente entiende su proceso y el equipo ve qué acción debe tomar después.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head">
+          <h2>Automatización 360 para Healen.</h2>
+          <p>La meta es que el equipo no dependa de memoria manual: Evangelin empuja acciones, detecta oportunidades y organiza la operación por prioridades.</p>
+        </div>
+
+        <div class="metric-strip" aria-label="Capas de automatización">
+          <article class="metric-item">
+            <strong>Ventas</strong>
+            <p>Leads, seguimientos, cierre, recompras, clientes interesados y próximos pasos comerciales.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Cartera</strong>
+            <p>Saldos pendientes, pacientes por cobrar, mensajes de recuperación y alertas de pago.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Tratamientos</strong>
+            <p>Fase, ciclo, dosis, sesiones ejecutadas, continuidad y pacientes próximos a vencer.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Marketing</strong>
+            <p>Pautas, copys, ideas de campaña, ofertas, medición de resultados y tareas creativas.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Contabilidad</strong>
+            <p>Apoyo para organizar valores, cobros, pagos pendientes y reportes para administración.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Equipo</strong>
+            <p>Tareas, responsables, recordatorios, agendas y seguimiento de compromisos internos.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Estadísticas</strong>
+            <p>Pacientes activos, recompra, vencimientos, conversión, servicios más vendidos y oportunidades.</p>
+          </article>
+          <article class="metric-item">
+            <strong>Estrategia</strong>
+            <p>Recomendaciones internas y externas para vender más, retener pacientes y priorizar acciones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head">
           <h2>Alcance de trabajo.</h2>
-          <p>La Fase 3 combina instalación, configuración, entrenamiento y acompañamiento inicial.</p>
+          <p>La Fase 3 combina producto, automatización, agente, portal, entrenamiento y acompañamiento inicial.</p>
         </div>
 
         <div class="scope-grid">
           <article class="scope-card">
             <div class="scope-icon">01</div>
-            <h3>Diseño del agente</h3>
-            <p>Definición de personalidad, comandos, tareas frecuentes y respuestas alineadas a la operación de Healen.</p>
+            <h3>Diseño de Evangelin</h3>
+            <p>Definición de personalidad, conocimiento, comandos, tareas frecuentes y poderes internos/externos alineados a la operación de Healen.</p>
           </article>
           <article class="scope-card">
             <div class="scope-icon">02</div>
-            <h3>Automatización comercial</h3>
-            <p>Flujos para ventas, pauta, seguimiento, ideas de contenido, campañas y soporte a decisiones del equipo.</p>
+            <h3>Portal del paciente</h3>
+            <p>Vista de histórico, tratamientos, tiempo con Healen, avance, próximas acciones y comunicación de progreso para el cliente.</p>
           </article>
           <article class="scope-card">
             <div class="scope-icon">03</div>
-            <h3>Operación asistida</h3>
-            <p>Consultas, recordatorios, resúmenes y tareas para reducir fricción en la gestión diaria.</p>
+            <h3>Ventas y cierre</h3>
+            <p>Atención inicial, seguimiento, recuperación de interesados, recompras, paquetes y apoyo para cerrar tratamientos.</p>
           </article>
           <article class="scope-card">
             <div class="scope-icon">04</div>
-            <h3>Integración con la base</h3>
-            <p>Preparación para que el agente trabaje sobre la información de pacientes, inventario y movimientos clave.</p>
+            <h3>Control clínico-comercial</h3>
+            <p>Categorización del paciente, fase/ciclo, ejecución de tratamientos, alertas de vencimiento, efectividad y continuidad.</p>
           </article>
           <article class="scope-card">
             <div class="scope-icon">05</div>
-            <h3>Entrenamiento del equipo</h3>
-            <p>Guía inicial para que el equipo sepa qué pedirle al agente y cómo usarlo sin complicarse.</p>
+            <h3>Cotizaciones inteligentes</h3>
+            <p>Flujo para que el médico dicte por audio lo recomendado y el sistema prepare una cotización clara para entregar al paciente.</p>
           </article>
           <article class="scope-card">
             <div class="scope-icon">06</div>
-            <h3>Ajustes de cierre</h3>
-            <p>Correcciones finales para dejar una primera versión útil, clara y lista para operar.</p>
+            <h3>Entrenamiento y cierre</h3>
+            <p>Guía al equipo, pruebas, ajustes finales y acompañamiento para que la primera versión quede usable en la operación diaria.</p>
           </article>
         </div>
       </div>
@@ -1056,8 +1178,16 @@
           <div>
             <p class="eyebrow">Resumen para aprobación</p>
             <h2>Fase 3 lista para iniciar.</h2>
-            <p>Healen mantiene a favor lo ya trabajado y activa una nueva etapa enfocada en ejecución comercial y automatización real.</p>
+            <p>Healen mantiene a favor lo ya trabajado y activa una nueva etapa enfocada en Evangelin Healen, portal de pacientes, ejecución comercial, automatización interna y control real del tratamiento.</p>
             <div class="summary-list">
+              <div class="summary-row">
+                <span>Producto central</span>
+                <strong>Evangelin Healen + portal de pacientes</strong>
+              </div>
+              <div class="summary-row">
+                <span>Automatizaciones incluidas</span>
+                <strong>Ventas · cartera · marketing · tratamientos · tareas</strong>
+              </div>
               <div class="summary-row">
                 <span>Valor especial Fase 3</span>
                 <strong>$15.300.000 COP</strong>
@@ -1093,9 +1223,9 @@
             <div>
               <p>Pago para activar ahora</p>
               <div class="amount">$3.900.000 COP</div>
-              <p>$1.400.000 de cierre Fase 2 + $2.500.000 de adelanto Fase 3. El saldo de $10.000.000 COP se paga 50% con entrega de avance, 25% a punto de finalizar y 25% al finalizar. SolversAI no cobra mensualidad de gestión; Healen solo debe proporcionar una tarjeta para consumos técnicos estimados entre $250.000 y $300.000 COP al mes, con tope de referencia de $500.000 COP.</p>
+              <p>$1.400.000 de cierre Fase 2 + $2.500.000 de adelanto Fase 3. Esta etapa instala Evangelin Healen, portal de pacientes y automatización 360 para ventas, cartera, tratamientos, marketing, cotizaciones y tareas internas. El saldo de $10.000.000 COP se paga 50% con entrega de avance, 25% a punto de finalizar y 25% al finalizar. SolversAI no cobra mensualidad de gestión; Healen solo debe proporcionar una tarjeta para consumos técnicos estimados entre $250.000 y $300.000 COP al mes, con tope de referencia de $500.000 COP.</p>
             </div>
-            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20%2415.300.000%20COP.%20Entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20y%20%242.500.000%20COP%20como%20adelanto%2C%20quedando%20un%20saldo%20de%20%2410.000.000%20COP.%20Para%20iniciar%20pagaremos%20%243.900.000%20COP.%20El%20saldo%20restante%20se%20pagara%2050%25%20con%20entrega%20de%20avance%2C%2025%25%20a%20punto%20de%20finalizar%20y%2025%25%20una%20vez%20finalizado.%20Entendemos%20que%20SolversAI%20no%20cobra%20mensualidad%20de%20gestion%20y%20que%20Healen%20proporcionara%20una%20tarjeta%20debito%20o%20credito%20para%20consumos%20tecnicos%20estimados%20entre%20%24250.000%20y%20%24300.000%20COP%20al%20mes%2C%20con%20tope%20de%20referencia%20de%20%24500.000%20COP." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
+            <a class="button primary" href="https://wa.me/?text=Hola%20Solvers%2C%20aprobamos%20la%20Fase%203%20de%20Healen%20por%20%2415.300.000%20COP%2C%20incluyendo%20Evangelin%20Healen%2C%20portal%20de%20pacientes%20y%20automatizacion%20360%20para%20ventas%2C%20cartera%2C%20tratamientos%2C%20marketing%2C%20cotizaciones%20y%20tareas%20internas.%20Entendemos%20que%20se%20reconocen%20%242.800.000%20COP%20de%20la%20fase%20anterior%20y%20%242.500.000%20COP%20como%20adelanto%2C%20quedando%20un%20saldo%20de%20%2410.000.000%20COP.%20Para%20iniciar%20pagaremos%20%243.900.000%20COP.%20El%20saldo%20restante%20se%20pagara%2050%25%20con%20entrega%20de%20avance%2C%2025%25%20a%20punto%20de%20finalizar%20y%2025%25%20una%20vez%20finalizado.%20Entendemos%20que%20SolversAI%20no%20cobra%20mensualidad%20de%20gestion%20y%20que%20Healen%20proporcionara%20una%20tarjeta%20debito%20o%20credito%20para%20consumos%20tecnicos%20estimados%20entre%20%24250.000%20y%20%24300.000%20COP%20al%20mes%2C%20con%20tope%20de%20referencia%20de%20%24500.000%20COP." aria-label="Aprobar Fase 3 por WhatsApp">Aprobar Fase 3</a>
           </aside>
         </div>
       </div>
@@ -1103,7 +1233,7 @@
 
     <footer>
       <div class="shell">
-        SolversAI · Propuesta Healen Fase 3 · Agente SolversAI por Telegram
+        SolversAI · Propuesta Healen Fase 3 · Evangelin Healen + portal de pacientes
       </div>
     </footer>
   </main>
