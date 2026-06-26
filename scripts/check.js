@@ -24,7 +24,7 @@ const required = [
   "$300.000",
   "$500.000",
   "consumos técnicos",
-  "Evangelin Healen",
+  "Eva Healen",
   "portal de pacientes",
   "Cotizaciones por audio médico",
   "Automatización 360",
